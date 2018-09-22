@@ -22,7 +22,20 @@
 #include <vector>
 #include <time.h>
 #include "code.h"
+#include "response.h"
 
+bool operator == (response& response1, response& response2) {
+   return response1.getNumCorrect() == response2.getNumCorrect() &&
+          response2.getNumIncorrect() == response2.getNumIncorrect();
+}
+
+// This is not working now, wait for class
+/*
+void operator << (response& response1) {
+   return "Number Correct: " + std::to_string(response1.getNumCorrect()) +
+          ", Number Incorrect: " std::to_string(response1.getNumIncorrect()) +
+          "\n";
+*/
 // Main function, entry point for application
 int main()
 {
