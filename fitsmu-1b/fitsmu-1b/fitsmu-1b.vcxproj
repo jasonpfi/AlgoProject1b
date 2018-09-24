@@ -149,7 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="code.cpp" />
-    <ClCompile Include="fitsmu1a.cpp" />
+    <ClCompile Include="fitsmu1b.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

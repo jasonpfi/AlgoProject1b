@@ -23,10 +23,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="fitsmu1a.cpp">
+    <ClCompile Include="code.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="code.cpp">
+    <ClCompile Include="fitsmu1b.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

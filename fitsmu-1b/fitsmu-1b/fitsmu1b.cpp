@@ -4,7 +4,7 @@
 // Justin Fitch
 // Sam Smucny
 //
-// fitsmu1a.cpp : Defines the entry point for the console application.
+// fitsmu1b.cpp : Defines the entry point for the console application.
 // This is the Mastermind game
 // The Codemaker will create a secret code based on the input from the
 // code breaker
@@ -24,10 +24,10 @@
 #include "code.h"
 #include "response.h"
 
-bool operator == (response& response1, response& response2) {
-   return response1.getNumCorrect() == response2.getNumCorrect() &&
-          response2.getNumIncorrect() == response2.getNumIncorrect();
-}
+//bool operator == (const response& response1, const response& response2) {
+//   return response1.getNumCorrect() == response2.getNumCorrect() &&
+//          response2.getNumIncorrect() == response2.getNumIncorrect();
+//}
 
 // This is not working now, wait for class
 /*
