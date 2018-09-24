@@ -7,6 +7,7 @@
  */
 
 #include "code.h"
+#include "response.h"
 
 class mastermind {
 

@@ -145,11 +145,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="code.h" />
+    <ClInclude Include="mastermind.h" />
+    <ClInclude Include="response.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="code.cpp" />
-    <ClCompile Include="fitsmu1a.cpp" />
+    <ClCompile Include="fitsmu1b.cpp" />
+    <ClCompile Include="mastermind.cpp" />
+    <ClCompile Include="response.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
