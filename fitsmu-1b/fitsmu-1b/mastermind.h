@@ -6,7 +6,7 @@
  * TODO: Add other shit
  */
 
-#include "response.h"
+#include "code.h"
 
 class mastermind {
 
@@ -25,19 +25,21 @@ public:
 
    // Passed a code object and returns a response (how many correct, how many
    // incorrect)
-   response getResponse(code userCode);
+   response getResponse(code& userCode);
 
    // Passed a response and returns true if the response indicates that the
    //  board has been solved
-   bool isSolved(response userResponse);
+   bool isSolved(const response& userResponse);
 
    // Initializes random code, prints it to screen, and iteratively takes a
    //  guess from the user and prints the response until either the codemaker
    //  or codebreaker has won
    void playGame();
 
+   static mastermind acceptInput();
+
 private:
 
    // Private data members
    code secretCode;
-}
+};

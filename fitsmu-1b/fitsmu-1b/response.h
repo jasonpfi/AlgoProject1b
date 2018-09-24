@@ -12,6 +12,10 @@ class response {
 public:
 
    response(int numberCorrect, int numberIncorrect);
+   response() {
+      this->numberCorrect = 0;
+      this->numberIncorrect = 0;
+   }
 
    // Setters
    void setNumCorrect(int numberCorrect);

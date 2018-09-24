@@ -21,50 +21,21 @@
 #include <stdlib.h>
 #include <vector>
 #include <time.h>
-#include "code.h"
-#include "response.h"
+#include "mastermind.h"
 
 bool operator == (response& response1, response& response2) {
    return response1.getNumCorrect() == response2.getNumCorrect() &&
           response2.getNumIncorrect() == response2.getNumIncorrect();
 }
 
-// This is not working now, wait for class
-/*
-void operator << (response& response1) {
-   return "Number Correct: " + std::to_string(response1.getNumCorrect()) +
-          ", Number Incorrect: " std::to_string(response1.getNumIncorrect()) +
-          "\n";
-*/
 // Main function, entry point for application
 int main()
 {
    // Seed the random funtion with the time of execution
 	 srand(time(NULL));
 
-   // Accept user Input and create secret code object
-   std::cout << "Welcome to the MASTERMIND Game!\n";
-
-   // Instantiate code object - 5 digits long and max digit of 9
-   code secretCode = code(5,9);
-
-   // Print out the secret code
-	 secretCode.printCode();
-
-   // Create User code object with guess as secret
-	 auto a = secretCode.checkUserInput(code({ 5,0,3,2,6 }, 9));
-	 auto b = secretCode.checkUserInput(code({ 2,1,2,2,2 }, 9));
-	 auto c = secretCode.checkUserInput(code({ 1,3,3,4,5 }, 9));
-
-   // Print out user code and comparison output
-	 std::cout << "5, 0, 3, 2, 6  (" << a.correctDigitCorrectPlacement << ", " <<
-     a.correctDigitIncorrectPlacement << ")" << std::endl;
-
-   std::cout << "2, 1, 2, 2, 2  (" << b.correctDigitCorrectPlacement << ", " <<
-     b.correctDigitIncorrectPlacement << ")" << std::endl;
-
-   std::cout << "1, 3, 3, 4, 5  (" << c.correctDigitCorrectPlacement << ", " <<
-     c.correctDigitIncorrectPlacement << ")" << std::endl;
+    mastermind gameObject = mastermind::acceptInput();
+    gameObject.playGame();
 
    // Wait for user input to end program
 	 std::cin.get();

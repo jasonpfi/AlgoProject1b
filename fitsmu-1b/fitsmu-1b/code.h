@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <vector>
 #include <time.h>
+#include "response.h"
 
 struct codeGuess
 // Structure defining the output of checking the user code input
@@ -41,7 +42,7 @@ public:
 	 int checkCorrect(const code& guess) const;
 	 int checkIncorrect(const code& guess) const;
 	 bool checkValidity() const;
-	 bool checkWin(const codeGuess& codeGuessOutput) const;
+	 bool checkWin(const response& userResponse) const;
 	 code generateUserCode() const;
 	 codeGuess checkUserInput(const code& userCode) const;
 

@@ -86,7 +86,7 @@ bool code::find(const std::vector<int>& v, const int& digit)
 	 return false;
 }
 
-bool code::checkWin(const codeGuess& codeGuessOutput) const
+bool code::checkWin(const response& userResponse) const
 // Check if the correct digits in the correct place is equal to the length
 // of the secret code. Then the code has been guessed
 //
@@ -94,7 +94,7 @@ bool code::checkWin(const codeGuess& codeGuessOutput) const
 //                  user code against the secret code. Passed by reference
 //                  so the struct in the main funtion can be changed
 {
-	 return codeGuessOutput.correctDigitCorrectPlacement == this->codeLen;
+	 return userResponse.getNumCorrect() == this->codeLen;
 }
 
 codeGuess code::checkUserInput(const code& userCode) const
