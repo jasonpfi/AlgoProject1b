@@ -6,6 +6,7 @@
  * TODO: Add other shit
  */
 
+#include "code.h"
 #include "response.h"
 
 class mastermind {
@@ -40,4 +41,4 @@ private:
 
    // Private data members
    code secretCode;
-}
+};
