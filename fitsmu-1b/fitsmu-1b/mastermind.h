@@ -8,38 +8,39 @@
 
 #include "code.h"
 
-class mastermind {
+class mastermind
+{
 
 public:
 
-   // Constructors
-   mastermind(int codeLen, int maxDig);
-   mastermind();
+	// Constructors
+	mastermind(int codeLen, int maxDig);
+	mastermind();
 
-   // Prints the secret code
-   void printCode() const;
+	// Prints the secret code
+	void printCode() const;
 
-   // Reads a guess from the keyboard and returns a code object that represents
-   // the guess
-   code humanGuess();
+	// Reads a guess from the keyboard and returns a code object that represents
+	// the guess
+	code humanGuess();
 
-   // Passed a code object and returns a response (how many correct, how many
-   // incorrect)
-   response getResponse(code& userCode);
+	// Passed a code object and returns a response (how many correct, how many
+	// incorrect)
+	response getResponse(code& userCode);
 
-   // Passed a response and returns true if the response indicates that the
-   //  board has been solved
-   bool isSolved(const response& userResponse);
+	// Passed a response and returns true if the response indicates that the
+	//  board has been solved
+	bool isSolved(const response& userResponse);
 
-   // Initializes random code, prints it to screen, and iteratively takes a
-   //  guess from the user and prints the response until either the codemaker
-   //  or codebreaker has won
-   void playGame();
+	// Initializes random code, prints it to screen, and iteratively takes a
+	//  guess from the user and prints the response until either the codemaker
+	//  or codebreaker has won
+	void playGame();
 
-   static mastermind acceptInput();
+	static mastermind acceptInput();
 
 private:
 
-   // Private data members
-   code secretCode;
+	// Private data members
+	code secretCode;
 };

@@ -31,12 +31,12 @@
 // Main function, entry point for application
 int main()
 {
-   // Seed the random funtion with the time of execution
-	 srand(time(NULL));
+	// Seed the random funtion with the time of execution
+	srand(time(NULL));
 
-    mastermind gameObject = mastermind::acceptInput();
-    gameObject.playGame();
+	mastermind gameObject = mastermind::acceptInput();
+	gameObject.playGame();
 
-   // Wait for user input to end program
-	 std::cin.get();
+	// Wait for user input to end program
+	std::cin.get();
 }
