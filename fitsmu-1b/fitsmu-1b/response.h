@@ -16,7 +16,7 @@ class response
 
 public:
 
-   // Constructors
+	// Constructors
 	response(const int& numberCorrect, const int& numberIncorrect);
 	response();
 
@@ -30,7 +30,7 @@ public:
 
 private:
 
-   // Private data members
+	// Private data members
 	int numberCorrect;
 	int numberIncorrect;
 

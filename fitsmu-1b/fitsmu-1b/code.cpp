@@ -94,7 +94,7 @@ code code::generateUserCode() const
 	// Accept input for each digit in user code
 	for (int i = 0; i < this->codeLen; i++)
 	{
-		std::cout << "Digit " << (i+1) << ": ";
+		std::cout << "Digit " << (i + 1) << ": ";
 		std::cin >> userCode.secret.at(i);
 	}
 

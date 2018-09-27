@@ -16,10 +16,10 @@ std::ostream& operator << (std::ostream& os, response& response1)
 // Overloaded output operator to print a response
 {
 	return os
-	  << "Number Correct:   " + std::to_string(response1.getNumCorrect())
-      << std::endl
-      << "Number Incorrect: " + std::to_string(response1.getNumIncorrect())
-      << std::endl;
+		<< "Number Correct:   " + std::to_string(response1.getNumCorrect())
+		<< std::endl
+		<< "Number Incorrect: " + std::to_string(response1.getNumIncorrect())
+		<< std::endl;
 }
 
 bool operator== (const response& lhs, const response& rhs)
@@ -95,11 +95,11 @@ mastermind mastermind::acceptInput()
 		std::cout << "One or both of the values you entered were not valid. "
 			<< "Please choose two non negative integers.\n";
 
-      // Run the function again to get better input
-      acceptInput();
+		// Run the function again to get better input
+		acceptInput();
 	}
 
-   return mastermind(codeLength, maxDigit);
+	return mastermind(codeLength, maxDigit);
 } // End acceptInput()
 
 void mastermind::playGame()
@@ -110,8 +110,8 @@ void mastermind::playGame()
 	code userCode;
 	response userResponse;
 
-   // Generate random secretCode
-   this->secretCode.generateSecretCode();
+	// Generate random secretCode
+	this->secretCode.generateSecretCode();
 
 	// Print out secret code for debugging
 	std::cout << "The secret code: ";
@@ -123,18 +123,18 @@ void mastermind::playGame()
 		std::cout << "Attempt #" << (i + 1) << " out of 10" << std::endl;
 		userCode = this->humanGuess();
 
-      // Check valid user input (BONUS)
-      while (!userCode.checkValidity())
+		// Check valid user input (**BONUS**)
+		while (!userCode.checkValidity())
 		{
 			std::cout << "Hmm... One of your digits was either too "
 				<< "high or too low, try again" << std::endl;
 			userCode = this->humanGuess();
 		}
 
-      // Check correct and check incorrect
+		// Check correct and check incorrect
 		userResponse = this->getResponse(userCode);
 
-      // Check if the game has been won
+		// Check if the game has been won
 		if (this->isSolved(userResponse))
 		{
 			std::cout << "You guessed the code! You win!" << std::endl;
