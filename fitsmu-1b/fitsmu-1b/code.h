@@ -1,7 +1,7 @@
 // Project 1b
 //
 // Team: fitsmu
-// Jaso nFitch
+// Jason Fitch
 // Sam Smucny
 //
 // code.h: header file for code class and codeGuess

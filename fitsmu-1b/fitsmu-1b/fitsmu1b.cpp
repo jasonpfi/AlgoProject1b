@@ -23,11 +23,6 @@
 #include <time.h>
 #include "mastermind.h"
 
-//bool operator == (const response& response1, const response& response2) {
-//   return response1.getNumCorrect() == response2.getNumCorrect() &&
-//          response2.getNumIncorrect() == response2.getNumIncorrect();
-//}
-
 // Main function, entry point for application
 int main()
 {
