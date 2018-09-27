@@ -3,25 +3,21 @@
  * This class holds the response to a guess:
  *  - The number correct
  *  - The number incorrect
- *
- *  TODO: add other shit
  */
+
+#include <iostream>
 
 class response
 {
 
 public:
 
-	response(int numberCorrect, int numberIncorrect);
-	response()
-	{
-		this->numberCorrect = 0;
-		this->numberIncorrect = 0;
-	}
+	response(const int& numberCorrect, const int& numberIncorrect);
+	response();
 
 	// Setters
-	void setNumCorrect(int numberCorrect);
-	void setNumIncorrect(int numberIncorrect);
+	void setNumCorrect(const int& numberCorrect);
+	void setNumIncorrect(const int& numberIncorrect);
 
 	// Getters
 	int getNumCorrect() const;
