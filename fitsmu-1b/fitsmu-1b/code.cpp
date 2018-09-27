@@ -13,7 +13,6 @@ code::code()
 {
 	codeLen = 1;
 	maxDig = 1;
-	generateSecretCode();
 }
 
 code::code(const int& codeLen, const int& maxDig)
@@ -25,7 +24,6 @@ code::code(const int& codeLen, const int& maxDig)
 {
 	this->codeLen = codeLen;
 	this->maxDig = maxDig;
-	generateSecretCode();
 }
 
 code::code(const std::vector<int>& newSecret, const int& maxDigit)

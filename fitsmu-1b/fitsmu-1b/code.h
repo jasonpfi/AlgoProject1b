@@ -27,6 +27,7 @@ public:
 
 	// Non-Static Member Functions
 	void printCode() const;
+	void generateSecretCode();
 	int checkCorrect(const code& guess) const;
 	int checkIncorrect(const code& guess) const;
 	bool checkValidity() const;
@@ -41,8 +42,7 @@ private:
 	std::vector<int> secret;
 
 	// Private Method
-	void generateSecretCode();
-	void checkCorrectForIncorrect(std::vector<int>& checkedDigits, 
+	void checkCorrectForIncorrect(std::vector<int>& checkedDigits,
 		const code& guess) const;
 
 	// Static Member Functions
