@@ -1,7 +1,7 @@
 // Project 1b
 //
 // Team: fitsmu
-// Justin Fitch
+// Jason Fitch
 // Sam Smucny
 //
 // mastermind.cpp: This cpp file holds all of the data members

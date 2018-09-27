@@ -1,7 +1,7 @@
 // Project 1b
 //
 // Team: fitsmu
-// Justin Fitch
+// Jason Fitch
 // Sam Smucny
 //
 // mastermind.h: This header file holds all of the data members and function declarations

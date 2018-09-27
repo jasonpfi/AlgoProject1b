@@ -1,7 +1,7 @@
 // Project 1b
 //
 // Team: fitsmu
-// Justin Fitch
+// Jason Fitch
 // Sam Smucny
 // response.h: Header file defining the Response class
 //

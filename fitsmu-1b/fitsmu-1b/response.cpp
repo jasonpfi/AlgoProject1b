@@ -1,7 +1,7 @@
 // Project 1b
 //
 // Team: fitsmu
-// Justin Fitch
+// Jason Fitch
 // Sam Smucny
 //
 // source file for response class
