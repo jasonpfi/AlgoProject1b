@@ -1,8 +1,10 @@
-/**
- * cpp that holds funtion implementation of response.h header file
- *
- * TODO: Add other shit
- */
+// Project 1b
+//
+// Team: fitsmu
+// Justin Fitch
+// Sam Smucny
+//
+// source file for response class
 
 #include "response.h"
 

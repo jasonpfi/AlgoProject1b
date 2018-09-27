@@ -1,9 +1,14 @@
-/**
- * Header file defining the Response class
- * This class holds the response to a guess:
- *  - The number correct
- *  - The number incorrect
- */
+// Project 1b
+//
+// Team: fitsmu
+// Justin Fitch
+// Sam Smucny
+// response.h: Header file defining the Response class
+// 
+// This class holds the response to a guess:
+//  - The number correct
+//  - The number incorrect
+ 
 
 #include <iostream>
 

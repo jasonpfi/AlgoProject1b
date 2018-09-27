@@ -1,4 +1,4 @@
-// Project 1a
+// Project 1b
 //
 // Team: fitsmu
 // Justin Fitch
@@ -12,18 +12,6 @@
 #include <vector>
 #include <time.h>
 #include "response.h"
-
-struct codeGuess
-	// Structure defining the output of checking the user code input
-	// compared to the secret code
-	// correctDigitCorrectPlacement: how many digits were guessed in the
-	//                                correct positions
-	// correctDigitIncorrectPlacement: how many digits were guessed
-	//                                  correctly in the incorrect positions
-{
-	int correctDigitCorrectPlacement;
-	int correctDigitIncorrectPlacement;
-};
 
 class code
 	// Main class defining a code, secret or user input
@@ -54,8 +42,8 @@ private:
 
 	// Private Method
 	void generateSecretCode();
-	void checkCorrectForIncorrect(std::vector<int>& checkedDigits, const code&
-		guess) const;
+	void checkCorrectForIncorrect(std::vector<int>& checkedDigits, 
+		const code& guess) const;
 
 	// Static Member Functions
 	static bool find(const std::vector<int>& v, const int& digit);
