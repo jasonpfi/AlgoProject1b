@@ -44,10 +44,6 @@ public:
 	bool checkValidity() const;
 	bool checkWin(const response& userResponse) const;
 	code generateUserCode() const;
-	codeGuess checkUserInput(const code& userCode) const;
-
-	// Public static member function
-	static code acceptInput();
 
 private:
 

@@ -12,8 +12,10 @@ std::ostream& operator << (std::ostream& os, response& response1)
 // Overloaded output operator
 {
 	return os
-		<< "Number Correct: " + response1.getNumCorrect() << std::endl
-		<< "Number Incorrect: " + response1.getNumIncorrect() << std::endl;
+		<< "Number Correct: " + std::to_string(response1.getNumCorrect())
+      << std::endl
+      << "Number Incorrect: " + std::to_string(response1.getNumIncorrect())
+      << std::endl;
 }
 
 bool operator== (const response& lhs, const response& rhs)
@@ -23,7 +25,7 @@ bool operator== (const response& lhs, const response& rhs)
 		&& lhs.getNumIncorrect() == rhs.getNumIncorrect();
 }
 
-mastermind::mastermind(int codeLen, int maxDig)\
+mastermind::mastermind(int codeLen, int maxDig)
 // Constructor with passed parameters
 {
 	this->secretCode = code(codeLen, maxDig);

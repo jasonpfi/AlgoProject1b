@@ -39,34 +39,6 @@ code::code(const std::vector<int>& newSecret, const int& maxDigit)
 	maxDig = maxDigit;
 }
 
-code code::acceptInput()
-// Read data from User's keyboard to initialize the code.
-// Asks the user multiple again if input is invalid.
-{
-
-	int codeLength;
-	int maxDigit;
-
-	// Get user input
-	std::cout << "Please enter the desired length of the secret code: ";
-	std::cin >> codeLength;
-	std::cout << "Please enter the maximum digit you want to be in the"
-		"secret code: ";
-	std::cin >> maxDigit;
-
-	// check negative input
-	if (codeLength <= 0 || maxDigit <= 0)
-	{
-		std::cout << "One or both of the values you entered were not valid."
-			"Please choose two non negative integers." << std::endl;
-		return acceptInput();
-	}
-	else
-	{
-		return code(codeLength, maxDigit);
-	}
-} // End of acceptInput()
-
 bool code::find(const std::vector<int>& v, const int& digit)
 // Check if the passed integer is contained in the passed vector
 // This is a static method because has no instance importance but is
@@ -95,24 +67,6 @@ bool code::checkWin(const response& userResponse) const
 //                  so the struct in the main funtion can be changed
 {
 	return userResponse.getNumCorrect() == this->codeLen;
-}
-
-codeGuess code::checkUserInput(const code& userCode) const
-// Checks how the code that the user has input matches with the
-// secret code. This will return a struct that contains 2 integers
-// that tell how many correct digits were in the correst place and
-// how many correct digits were in the incorrect place.
-// To get the value of the integers, two helper functions are called
-// in each case to compare the two code objects
-//
-// userCode: The code object containing the code guessed by
-//           the player
-{
-	codeGuess codeGuessOutput;
-	codeGuessOutput.correctDigitCorrectPlacement = checkCorrect(userCode);
-	codeGuessOutput.correctDigitIncorrectPlacement = checkIncorrect(userCode);
-
-	return codeGuessOutput;
 }
 
 bool code::checkValidity() const
