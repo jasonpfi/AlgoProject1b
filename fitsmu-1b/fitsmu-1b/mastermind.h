@@ -1,4 +1,11 @@
 /**
+ * Project 1b
+ *
+ * Team: fitsmu
+ * Jason Fitch
+ * Sam Smucny
+ *
+ * mastermind.h:
  * This header file holds all of the data members and function declarations
  * for the mastermind class.
  * This class handles the playing of the game, holding a code object

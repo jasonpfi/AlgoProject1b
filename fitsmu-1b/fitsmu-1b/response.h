@@ -1,4 +1,11 @@
 /**
+ * Project 1b
+ *
+ * Team: fitsmu
+ * Jason Fitch
+ * Sam Smucny
+ *
+ * response.h:
  * Header file defining the Response class
  * This class holds the response to a guess:
  *  - The number correct
@@ -12,6 +19,7 @@ class response
 
 public:
 
+   // Constructors
 	response(const int& numberCorrect, const int& numberIncorrect);
 	response();
 
@@ -25,8 +33,8 @@ public:
 
 private:
 
+   // Private data members
 	int numberCorrect;
 	int numberIncorrect;
-
 
 };

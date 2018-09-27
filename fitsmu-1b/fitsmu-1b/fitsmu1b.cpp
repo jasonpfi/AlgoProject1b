@@ -34,6 +34,7 @@ int main()
 	// Seed the random funtion with the time of execution
 	srand(time(NULL));
 
+   // Create the game object and play
 	mastermind gameObject = mastermind::acceptInput();
 	gameObject.playGame();
 

@@ -1,4 +1,4 @@
-// Project 1a
+// Project 1b
 //
 // Team: fitsmu
 // Justin Fitch
@@ -195,20 +195,20 @@ void code::generateSecretCode()
 {
 	int randomNumber;
 
-	for (int i = 0; i < codeLen; i++)
+	for (int i = 0; i < this->codeLen; i++)
 	{
 		// generate random number from 0 to maxDig
-		randomNumber = rand() % (maxDig + 1);
-		secret.push_back(randomNumber);
+		randomNumber = rand() % (this->maxDig + 1);
+		this->secret.push_back(randomNumber);
 	}
 }
 
 void code::printCode() const
 // Print the code, used for error checking
 {
-	for (int i = 0; i < secret.size(); i++)
+	for (int i = 0; i < this->secret.size(); i++)
 	{
-		std::cout << secret.at(i) << ", ";
+		std::cout << this->secret.at(i) << ", ";
 	}
 
 	std::cout << std::endl;

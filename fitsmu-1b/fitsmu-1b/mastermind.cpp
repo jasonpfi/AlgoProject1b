@@ -1,4 +1,11 @@
 /**
+ * Project 1b
+ *
+ * Team: fitsmu
+ * Jason Fitch
+ * Sam Smucny
+ *
+ * mastermind.cpp:
  * This cpp file holds all of the data members and function declarations for
  *  the mastermind class.
  * This class handles playing the game and determining which user has won
@@ -9,7 +16,7 @@
 #include "mastermind.h"
 
 std::ostream& operator << (std::ostream& os, response& response1)
-// Overloaded output operator
+// Overloaded output operator to print a response
 {
 	return os
 		<< "Number Correct: " + std::to_string(response1.getNumCorrect())
@@ -19,40 +26,42 @@ std::ostream& operator << (std::ostream& os, response& response1)
 }
 
 bool operator== (const response& lhs, const response& rhs)
-// Overloaded equality operator
+// Overloaded equality operator to check if response objects are equal
 {
 	return lhs.getNumCorrect() == rhs.getNumCorrect()
 		&& lhs.getNumIncorrect() == rhs.getNumIncorrect();
 }
 
 mastermind::mastermind(int codeLen, int maxDig)
-// Constructor with passed parameters
+// Constructor with passed parameters of secret code length and max digit
 {
 	this->secretCode = code(codeLen, maxDig);
 }
 
 mastermind::mastermind()
-// Constructor with default values
+// Constructor with default values for code object
 {
 	this->secretCode = code(5, 10);
 }
 
 void mastermind::printCode() const
-// Prints secret code (for debugging)
+// Prints secret code. Calls the code member function to access private data
+//  members
 {
 	this->secretCode.printCode();
 }
 
 code mastermind::humanGuess()
 // Reads a guess from the keyboard and returns a code object that represents
-// the guess
+//  the guess. Calls the code member function to access private data members
+//  of the secret code object
 {
 	return this->secretCode.generateUserCode();
 }
 
 response mastermind::getResponse(code& userCode)
 // Passed a code object and returns a response (how many correct, how many
-// incorrect)
+//  incorrect). Utilizes the code member functions that contain logic
 {
 	response guessResponse;
 	guessResponse.setNumCorrect(secretCode.checkCorrect(userCode));
@@ -63,7 +72,8 @@ response mastermind::getResponse(code& userCode)
 
 bool mastermind::isSolved(const response& userResponse)
 // Passed a response and returns true if the response indicates that the
-//  board has been solved
+//  board has been solved. Utilizes code member function to access private
+//  data members
 {
 	return secretCode.checkWin(userResponse);
 }
@@ -93,7 +103,7 @@ mastermind mastermind::acceptInput()
 	{
 		return mastermind(codeLength, maxDigit);
 	}
-}
+} // End acceptInput()
 
 void mastermind::playGame()
 // Initializes random code, prints it to screen, and iteratively takes a
@@ -106,10 +116,12 @@ void mastermind::playGame()
 	code userCode;
 	response userResponse;
 
-	this->printCode();
+	// this->printCode();
 
+   // Loop from 0 to 9 for the user's 10 guesses
 	for (int i = 0; i < 10; i++)
 	{
+      // Let user guess and check if input is valid
 		userCode = this->humanGuess();
 		if (!userCode.checkValidity())
 		{
@@ -117,8 +129,10 @@ void mastermind::playGame()
 			userCode = this->humanGuess();
 		}
 
+      // Check correct and check incorrect
 		userResponse = this->getResponse(userCode);
 
+      // Check if the game has been won
 		if (this->isSolved(userResponse))
 		{
 			std::cout << "You guessed the code!";
@@ -126,11 +140,12 @@ void mastermind::playGame()
 		}
 
 		std::cout << userResponse;
-	}
+	} // End for
 
 	std::cout << "Sorry, you lose! The secret code was: ";
 	this->printCode();
-}
+
+} // End playGame()
 
 
 

@@ -1,7 +1,12 @@
 /**
- * cpp that holds funtion implementation of response.h header file
+ * Project 1b
  *
- * TODO: Add other shit
+ * Team: fitsmu
+ * Jason Fitch
+ * Sam Smucny
+ *
+ * respones.cpp: .cpp that holds funtion implementation of response.h header
+ *               file
  */
 
 #include "response.h"
