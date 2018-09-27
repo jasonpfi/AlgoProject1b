@@ -1,13 +1,10 @@
-/**
- * Project 1b
- *
- * Team: fitsmu
- * Jason Fitch
- * Sam Smucny
- *
- * respones.cpp: .cpp that holds funtion implementation of response.h header
- *               file
- */
+// Project 1b
+//
+// Team: fitsmu
+// Justin Fitch
+// Sam Smucny
+//
+// source file for response class
 
 #include "response.h"
 

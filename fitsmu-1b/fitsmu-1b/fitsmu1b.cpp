@@ -1,4 +1,4 @@
-// Project 1a
+// Project 1b
 //
 // Team: fitsmu
 // Justin Fitch
@@ -31,11 +31,17 @@
 // Main function, entry point for application
 int main()
 {
+	// Welcome message
+	std::cout << "Welcome to MASTERMIND!" << std::endl;
+	std::cout << "Can you guess the secret code in 10 guesses?" << std::endl;
+
 	// Seed the random funtion with the time of execution
 	srand(time(NULL));
 
-   // Create the game object and play
+	// Call factory function to initialize mastermind object
 	mastermind gameObject = mastermind::acceptInput();
+
+	// Run game
 	gameObject.playGame();
 
 	// Wait for user input to end program

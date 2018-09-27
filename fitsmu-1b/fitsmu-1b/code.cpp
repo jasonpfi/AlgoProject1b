@@ -77,9 +77,9 @@ bool code::checkValidity() const
 	for (int i = 0; i < codeLen; i++)
 	{
 		// if the user code has digits greater than the max digit
-		// or less than 1
-		//  then return false
-		if (this->secret.at(i) > this->maxDig || this->secret.at(i) <= 0)
+		// or less than 0
+		// then return false
+		if (this->secret.at(i) > this->maxDig || this->secret.at(i) < 0)
 			return false;
 	}
 
@@ -96,7 +96,7 @@ code code::generateUserCode() const
 	// Accept input for each digit in user code
 	for (int i = 0; i < this->codeLen; i++)
 	{
-		std::cout << "Digit " << i << ": ";
+		std::cout << "Digit " << (i+1) << ": ";
 		std::cin >> userCode.secret.at(i);
 	}
 
@@ -206,9 +206,13 @@ void code::generateSecretCode()
 void code::printCode() const
 // Print the code, used for error checking
 {
-	for (int i = 0; i < this->secret.size(); i++)
+	if (secret.size() > 0)
 	{
-		std::cout << this->secret.at(i) << ", ";
+		std::cout << secret.at(0);
+	}
+	for (int i = 1; i < secret.size(); i++)
+	{
+		std::cout << ", " << secret.at(i);
 	}
 
 	std::cout << std::endl;
