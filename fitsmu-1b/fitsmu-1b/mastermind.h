@@ -22,7 +22,7 @@ public:
 	// Initializes random code, prints it to screen, and iteratively takes a
 	//  guess from the user and prints the response until either the codemaker
 	//  or codebreaker has won
-	void playGame() const;
+	void playGame();
 
 	static mastermind acceptInput();
 

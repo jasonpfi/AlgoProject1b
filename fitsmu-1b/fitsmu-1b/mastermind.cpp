@@ -93,22 +93,25 @@ mastermind mastermind::acceptInput()
 	if (codeLength <= 0 || maxDigit <= 0)
 	{
 		std::cout << "One or both of the values you entered were not valid. "
-			<< "Please choose two non negative integers." << std::endl;
-		return acceptInput();
+			<< "Please choose two non negative integers.\n";
+
+      // Run the function again to get better input
+      acceptInput();
 	}
-	else
-	{
-		return mastermind(codeLength, maxDigit);
-	}
+
+   return mastermind(codeLength, maxDigit);
 } // End acceptInput()
 
-void mastermind::playGame() const
+void mastermind::playGame()
 // Initializes random code, prints it to screen, and iteratively takes a
 // guess from the user and prints the response until either the codemaker
 // or codebreaker has won
 {
 	code userCode;
 	response userResponse;
+
+   // Generate random secretCode
+   this->secretCode.generateSecretCode();
 
 	// Print out secret code for debugging
 	std::cout << "The secret code: ";
@@ -119,7 +122,9 @@ void mastermind::playGame() const
 	{
 		std::cout << "Attempt #" << (i + 1) << " out of 10" << std::endl;
 		userCode = this->humanGuess();
-		while (!userCode.checkValidity())
+
+      // Check valid user input (BONUS)
+      while (!userCode.checkValidity())
 		{
 			std::cout << "Hmm... One of your digits was either too "
 				<< "high or too low, try again" << std::endl;
